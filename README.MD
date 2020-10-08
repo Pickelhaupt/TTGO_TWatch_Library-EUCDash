@@ -1,5 +1,7 @@
 <h1 align = "center">🌟LilyGO T-Watch🌟</h1>
 
+Cloned this repository to upgrade lvgl to 7.6
+
 **English | [中文](docs/details_cn.md)**
 
 
