@@ -93,17 +93,7 @@ typedef int16_t lv_coord_t;
 #  define LV_MEM_AUTO_DEFRAG  1
 #else       /*LV_MEM_CUSTOM*/
 #  define LV_MEM_CUSTOM_INCLUDE <stdlib.h>   /*Header for the dynamic memory function*/
-#if defined(BOARD_HAS_PSRAM)
-      /* Until Espressif corrects their own hearder */
-#  include <stddef.h>
-#  include <stdbool.h>
-
-      /* declare ps_malloc()'s prototype */
-#  include <esp32-hal-psram.h>
-#  define LV_MEM_CUSTOM_ALLOC   ps_malloc       /*Wrapper to malloc*/
-#else
 #  define LV_MEM_CUSTOM_ALLOC   malloc       /*Wrapper to malloc*/
-#endif
 #  define LV_MEM_CUSTOM_FREE    free         /*Wrapper to free*/
 #endif     /*LV_MEM_CUSTOM*/
 

@@ -136,11 +136,6 @@
 
 #elif defined(LILYGO_WATCH_2020_V2)
 #include "board/twatch2020_v2.h"
-
-#if defined(BOARD_HAS_PSRAM)
-#error  "The version you choose is Twatch 2020 V2, this version is not configured with PSRAM, please select Disable in the PSRAM enable tab in Arduino IDE"
-#endif
-
 // Has
 #define LILYGO_WATCH_HAS_TOUCH
 #define LILYGO_WATCH_HAS_DISPLAY
@@ -198,7 +193,7 @@
 // #define LILYGO_BLOCK_ST7796S_MODULE
 // #define LILYGO_BLOCK_ILI9488_MODULE
 
-#if defined(LILYGO_BLOCK_ST7796S_MODULE) || defined(LILYGO_BLOCK_ILI9488_MODULE) || defined(LILYGO_BLOCK_ILI9481_MODULE)
+#if defined(LILYGO_BLOCK_ST7796S_MODULE) || defined(LILYGO_BLOCK_ILI9488_MODULE)
 
 #define LILYGO_WATCH_HAS_TOUCH
 #define LILYGO_WATCH_HAS_DISPLAY
@@ -220,14 +215,6 @@
 
 #endif
 
-
-#if defined(LILYGO_BLOCK_ILI9481_MODULE)
-#define LILYGO_TOUCH_DRIVER_GTXXX
-#else
-#define LILYGO_TOUCH_DRIVER_FTXXX
-#endif  /*LILYGO_BLOCK_ILI9481_MODULE*/
-
-
 // Hardware not support
 // #undef LILYGO_WATCH_LVGL
 #undef LILYGO_WATCH_HAS_IRREMOTE
@@ -246,20 +233,13 @@
 #define LILYGO_WATCH_HAS_TOUCH
 #define LILYGO_TOUCHSCREEN_CALLBACK_METHOD
 
-#elif   defined(LILYGO_BLOCK_ST7796S_MODULE) || defined(LILYGO_BLOCK_ILI9481_MODULE)
+#elif   defined(LILYGO_BLOCK_ST7796S_MODULE)
 #define LILYGO_WATCH_HAS_TOUCH
 #define LILYGO_WATCH_HAS_DISPLAY
 #define LILYGO_WATCH_HAS_BACKLIGHT
 #define LILYGO_TOUCHSCREEN_CALLBACK_METHOD
 
-#endif  /*LILYGO_EINK_GDEW0371W7*/
-
-#if defined(LILYGO_BLOCK_ILI9481_MODULE)
-#define LILYGO_TOUCH_DRIVER_GTXXX
-#else
-#define LILYGO_TOUCH_DRIVER_FTXXX
-#endif  /*LILYGO_BLOCK_ILI9481_MODULE*/
-
+#endif
 
 #else
 

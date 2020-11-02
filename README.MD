@@ -1,7 +1,5 @@
 <h1 align = "center">🌟LilyGO T-Watch🌟</h1>
 
-Cloned this repository to upgrade lvgl to 7.6
-
 **English | [中文](docs/details_cn.md)**
 
 
@@ -61,9 +59,8 @@ Cloned this repository to upgrade lvgl to 7.6
 - In the Arduino File -> Examples -> `TTGO_TWatch_Library`
 
 * LilyPi
-- In the Arduino board select `TTGO T-Watch`
+- In the Arduino board select `ESP32 Dev Module`
 - In the Arduino File -> Examples -> `TTGO_TWatch_Library`
-- The core configuration of LilyPi is the same as T-Watch, it has 16M Flash and 8M PSRAM
 
  <h2 align = "left">🔶 Precautions</h2>
 
